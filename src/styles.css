@@ -1,0 +1,4 @@
+/* minimal global styles */
+html, body { height:100%; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:#fafafa; color:#111; }
+a { color:#0b5fff; text-decoration:none; }
+button { font-family:inherit; }

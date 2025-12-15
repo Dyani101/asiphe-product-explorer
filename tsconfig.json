@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "importHelpers": true,
+    "lib": ["ES2020", "DOM"],
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "types": ["node", "jasmine"]
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/test-typings.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,73 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+
+# =========================
+# Angular build outputs
+# =========================
+dist/
+build/
+out/
+coverage/
+.angular/
+.nx/
+storybook-static/
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.*
+!.env.example
+
+# Angular environments (keep only examples)
+src/environments/*.ts
+!src/environments/environment.example.ts
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Testing artifacts
+# =========================
+cypress/videos/
+cypress/screenshots/
+
+# =========================
+# Temporary / cache
+# =========================
+.tmp/
+.cache/
+*.tmp
+*.bak
+*.old
+
+# =========================
+# Optional: lock files
+# (Use ONE package manager only)
+# =========================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

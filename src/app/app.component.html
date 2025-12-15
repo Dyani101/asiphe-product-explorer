@@ -1,0 +1,25 @@
+<div class="app">
+  <header class="header" role="banner">
+    <div class="brand">
+      <a routerLink="" class="logo">asiphe-product-explorer</a>
+    </div>
+
+    <nav class="nav" role="navigation" aria-label="Main">
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Catalog</a>
+      <a routerLink="/favorites" routerLinkActive="active">Favorites</a>
+      <a routerLink="/admin" routerLinkActive="active">Admin</a>
+    </nav>
+
+    <div class="controls">
+      <button class="btn" (click)="toggleAdmin()" [attr.aria-pressed]="auth.isAdmin()">Toggle Admin</button>
+    </div>
+  </header>
+
+  <main class="main" role="main">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <small>© Demo — asiphe-product-explorer</small>
+  </footer>
+</div>

@@ -1,0 +1,26 @@
+<section aria-labelledby="catalog-heading">
+  <div class="toolbar">
+    <h1 id="catalog-heading">Catalog</h1>
+    <input class="search" type="search" placeholder="Search products" (input)="onSearch($any($event.target).value)" aria-label="Search products">
+  </div>
+
+  <ul class="grid" role="list">
+    <li *ngFor="let p of products" role="listitem" class="card">
+      <a [routerLink]="['/product', p.id]" class="card-link" [attr.aria-label]="p.title">
+        <div class="card-body">
+          <h2>{{p.title}}</h2>
+          <p class="muted">{{p.category}}</p>
+          <p class="desc">{{p.description}}</p>
+          <div class="meta">
+            <strong>R{{p.price}}</strong>
+          </div>
+        </div>
+      </a>
+      <button class="fav" (click)="toggleFav(p); $event.stopPropagation();" [attr.aria-pressed]="isFav(p)">
+        {{ isFav(p) ? 'Unfavorite' : 'Favorite' }}
+      </button>
+    </li>
+  </ul>
+
+  <p *ngIf="!products.length" class="empty">No results</p>
+</section>

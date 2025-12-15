@@ -1,0 +1,10 @@
+<section aria-labelledby="fav-heading">
+  <h1 id="fav-heading">Favorites</h1>
+  <p *ngIf="!items.length">No favorites yet. Use "Favorite" on a product to save it.</p>
+  <ul class="list" *ngIf="items.length">
+    <li *ngFor="let p of items" class="item">
+      <a [routerLink]="['/product', p.id]">{{p.title}}</a>
+      <button class="btn" (click)="remove(p)">Remove</button>
+    </li>
+  </ul>
+</section>
