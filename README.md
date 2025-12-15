@@ -6,25 +6,6 @@ A modern Angular application for browsing, searching, and managing products. The
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-* **Node.js** (LTS recommended)
-* **npm** (comes with Node.js)
-* **Angular CLI** (optional – app can be run via `npx`)
-
-You can verify with:
-
-```bash
-node -v
-npm -v
-```
-
----
-
 ## ▶️ Running the Application
 
 Install dependencies:
