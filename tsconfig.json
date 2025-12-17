@@ -21,7 +21,6 @@
     "src/test-typings.d.ts"
   ],
   "exclude": [
-    "node_modules",
-    "src/**/*.spec.ts"
+    "node_modules"
   ]
 }
