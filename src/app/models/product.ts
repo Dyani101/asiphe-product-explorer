@@ -8,7 +8,6 @@ export interface Product {
   category?: string;
   imageUrl?: string;
   tags?: string[];
-  // extendable metadata
   [key: string]: unknown;
 }
 

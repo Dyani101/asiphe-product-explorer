@@ -1,17 +1,22 @@
-<div *ngIf="product; else notFound" class="detail">
-  <a routerLink="/" class="back">← Back to catalog</a>
-  <div class="wrap">
-    <div class="info">
-      <h1>{{product.title}}</h1>
-      <p class="muted">{{product.category}}</p>
-      <p>{{product.description}}</p>
-      <div class="actions">
-        <strong class="price">R{{product.price}}</strong>
-        <button class="btn" (click)="toggleFav()">{{ isFav ? 'Unfavorite' : 'Add to favorites' }}</button>
+@if (product) {
+  <div class="detail">
+    <a routerLink="/" class="back">← Back to catalog</a>
+
+    <div class="wrap">
+      <div class="info">
+        <h1>{{ product.title }}</h1>
+        <p class="muted">{{ product.category }}</p>
+        <p>{{ product.description }}</p>
+
+        <div class="actions">
+          <strong class="price">R{{ product.price }}</strong>
+          <button class="btn" (click)="toggleFav()">
+            {{ isFav ? 'Unfavorite' : 'Add to favorites' }}
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<ng-template #notFound>
+} @else {
   <p>Product not found. <a routerLink="/">Return</a></p>
-</ng-template>
+}
